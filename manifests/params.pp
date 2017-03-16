@@ -25,7 +25,7 @@ class gnocchi::params {
       $common_package_name        = 'gnocchi-common'
       $api_package_name           = 'gnocchi-api'
       $api_service_name           = 'gnocchi-api'
-      $indexer_package_name       = undef
+      $indexer_package_name       = 'python-gnocchiclient'
       $carbonara_package_name     = 'gnocchi-carbonara'
       $metricd_package_name       = 'gnocchi-metricd'
       $metricd_service_name       = 'gnocchi-metricd'
