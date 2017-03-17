@@ -59,7 +59,7 @@ class gnocchi::db (
       'indexer/url': value => $database_connection_real, secret => true;
     }
 
-    if ::osfamily != 'Debian' {
+    if $::osfamily != 'Debian' {
       package { 'gnocchi-indexer-sqlalchemy':
         ensure => $ensure_package,
         name   => $::gnocchi::params::indexer_package_name,
