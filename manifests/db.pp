@@ -59,10 +59,12 @@ class gnocchi::db (
       'indexer/url': value => $database_connection_real, secret => true;
     }
 
-    package { 'gnocchi-indexer-sqlalchemy':
-      ensure => $ensure_package,
-      name   => $::gnocchi::params::indexer_package_name,
-      tag    => ['openstack', 'gnocchi-package'],
+    if ::osfamily != 'Debian' {
+      package { 'gnocchi-indexer-sqlalchemy':
+        ensure => $ensure_package,
+        name   => $::gnocchi::params::indexer_package_name,
+        tag    => ['openstack', 'gnocchi-package'],
+      }
     }
   }
 
