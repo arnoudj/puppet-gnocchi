@@ -126,7 +126,7 @@ class gnocchi::wsgi::apache (
     user                      => 'gnocchi',
     workers                   => $workers,
     wsgi_daemon_process       => 'gnocchi',
-    wsgi_process_display_name => $wsgi_process_display_name,
+#    wsgi_process_display_name => $wsgi_process_display_name,
     wsgi_process_group        => 'gnocchi',
     wsgi_script_dir           => $::gnocchi::params::gnocchi_wsgi_script_path,
     wsgi_script_file          => 'app',
